@@ -21,6 +21,7 @@ test.describe('Простой тест для логина и пароля', fun
         driver.findElement(By.name('username')).sendKeys('admin');
         driver.findElement(By.name('password')).sendKeys('admin');
         driver.findElement(By.name('login')).click();
+        driver.wait(until.titleIs('My Store'), 3000);
     });
 
     test.after(function() {
